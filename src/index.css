@@ -1,13 +1,85 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.dropdown > select {
+  width: 50%;
+}
+
+.node-menu {
+  margin: 0 20%;
+  display: grid;
+  place-items: center;
+}
+
+.node-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 700px;
+}
+.node-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30%;
+  text-align: center;
+  height: 120px;
+}
+
+.node-item-inner {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hover-display-hide {
+  display: none;
+}
+.hover-display-show {
+  display: block;
+  background-color: blue;
+  color: white;
+}
+
+.node-item::after {
+  content: "======>";
+}
+
+.node-item:nth-child(4)::after,
+.node-item:nth-child(5)::after {
+  content: "<======";
+}
+
+.node-item:nth-child(3)::after,
+.node-item:nth-child(6)::after,
+.node-item:nth-child(9)::after {
+  content: "";
 }
